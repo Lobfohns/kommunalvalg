@@ -23,6 +23,4 @@ public class Candidate {
     @JoinColumn(name = "party_id")
     @Nullable
     private Party party;
-
-
 }

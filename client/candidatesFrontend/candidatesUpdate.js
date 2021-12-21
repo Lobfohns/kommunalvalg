@@ -15,11 +15,10 @@ function updateCandidate(candidate) {
             <option value=5>V</option>
             <option value=6>Ø</option>
         </select> 
-        
         </td>
        <td>
-            <button id="cancel-update-${candidate.id}">Cancel</button>
-            <button onclick="updateCandidateInBackend(${candidate.id})">✅</button>
+            <button class="button" id="cancel-update-${candidate.id}">Cancel</button>
+            <button class="button" onclick="updateCandidateInBackend(${candidate.id})">✅</button>
        </td>
        <td>
             <button onclick="deleteCandidate(${candidate.id})">❌</button>
@@ -33,17 +32,12 @@ function updateCandidate(candidate) {
         });
     document.getElementById(`cancel-update-${candidate.id}`)
         .addEventListener("click", () => undoUpdateTableRow(candidate));
-
-
 }
 
 function undoUpdateTableRow(candidate) {
     const candidateTableRow = document.getElementById(candidate.id);
     createCandidateTableRow(candidateTableRow, candidate);
 }
-
-
-
 
 function updateCandidateInBackend(candidateId) {
     console.log("hej")
@@ -68,5 +62,4 @@ function updateCandidateInBackend(candidateId) {
             createCandidateTableRow(tableRowToUpdate, candidateToUpdate);
         }
     });
-
 }

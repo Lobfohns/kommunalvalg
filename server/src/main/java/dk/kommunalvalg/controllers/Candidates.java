@@ -33,7 +33,6 @@ public class Candidates {
         return candidates.findCandidatesByParty(partyId);
     }
 
-
     @PostMapping("/candidates/{partyId}")
     public CandidateCreateDTO createCandidate(@PathVariable Long partyId, @RequestBody Candidate candidateToCreate) {
         return parties.findById(partyId).map(party -> {

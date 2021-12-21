@@ -1,0 +1,36 @@
+#overall-div{
+    position: center;
+}
+
+#create-candidate-name, #label {
+    background-color: #eaf8fc;
+    border-radius: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;
+    width: 180px;
+    height: 15px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+}
+
+#party-search {
+    background-color: #eaf8fc;
+    border-radius: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;
+    width: 200px;
+    height: 15px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+}
+
+#party-dropdown{
+    margin: auto;
+    display: flex;
+
+}
+

@@ -4,9 +4,7 @@ package dk.kommunalvalg.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.Nullable;
 import lombok.Data;
-
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Data
@@ -29,5 +27,4 @@ public class Party {
     @JsonIgnore
     @OneToMany(mappedBy = "party", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Candidate> candidates;
-
 }

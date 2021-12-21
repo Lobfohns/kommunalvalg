@@ -1,13 +1,9 @@
 package dk.kommunalvalg.controllers;
 
-
-import dk.kommunalvalg.models.Candidate;
 import dk.kommunalvalg.models.Party;
 import dk.kommunalvalg.repositories.PartyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class Parties {
@@ -20,6 +16,11 @@ public class Parties {
         return parties.findAll();
     }
 
+    @GetMapping("/partiesVotes")
+    public double getTotalVotes(){
+        return parties.totalVotes();
+    }
+
     @GetMapping("/parties/{id}")
     public Party getParties(@PathVariable Long id) {
         return parties.findById(id).get();
@@ -30,5 +31,4 @@ public class Parties {
         newParties.setId(null);
         return parties.save(newParties);
     }
-
 }

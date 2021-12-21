@@ -1,23 +1,19 @@
-
 const candidateFormParentDiv = document.getElementById("create-candidate-form");
 const candidateFormExpandButton = document.getElementById("expand-candidate-form");
 
 const createCandidateForm = `<div>
-    <label>Name</label>
-    <input id="create-candidate-name" placeholder="name">
-    <label>Party</label>
+    <input id="create-candidate-name" placeholder="Candidate name">
+    <label id="label" >Choose party below</label>
     <select id="party-dropdown">
         <option value=1>A</option>
         <option value=2>C</option>
         <option value=3>F</option>
         <option value=4>O</option>
         <option value=5>V</option>
-        <option value=6>Ø</option>
-        
-    </select>   
-    <button onclick="removeCandidateForm()">Cancel</button>
-    <button onclick="createCandidate()">Create A New Candidate</button>
-    
+        <option value=6>Ø</option> 
+    </select> 
+    <button class="button" id="CancelButton"   onclick="removeCandidateForm()">Cancel</button>
+    <button class="button" id="CreateButton"  onclick="createCandidate()">Create A New Candidate</button>
 </div>`;
 
 function showCandidateForm() {

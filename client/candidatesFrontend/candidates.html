@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../global.css">
+    <link  href="./candidates.css" rel="stylesheet"><link>
     <script src="../global.js"></script>
     <script src="../lib/HTMLEscape.js"></script>
-
     <title>Candidates</title>
 </head>
 <body>
-<table>
+<div id="overall-div">
+<button class="button" id = button1 onclick="document.location='../partiesFrontend/parties.html'">Election Results</button>
+<table class="table" id="candidate-table">
 
-    <button id="expand-candidate-form">Candidate ➕</button>
+    <button class="button" id="expand-candidate-form">➕ Add Candidate</button>
     <div id="create-candidate-form">
     </div>
+    <thead>
     <tr>
-        <th>Name</th>
         <th>Party</th>
+        <th>Name</th>
     </tr>
-
+    <tr>
+        <th><input type="text" id="party-search" onkeyup="searchFunction()" placeholder="Search for party.." title="Type in a party"></th>
+    </tr>
+    </thead>
     <tbody id="candidate-names-list-tbody">
 
     </tbody>
-
+    </div>
 
 
     <script src="candidates.js"></script>
